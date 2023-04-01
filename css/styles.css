@@ -1,0 +1,62 @@
+
+
+.title{
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  background-color: rgb(149, 178, 204);
+}
+
+.canvas{
+  height: 70%;
+
+}
+
+.doodle-grid{
+  display: grid;
+  min-width: 45%;
+  grid-template-columns: repeat(8, 5vw);
+  grid-template-rows: repeat(8, 5vw);
+  position: absolute;
+  left: 30%;
+
+}
+
+.doodle-grid > div{
+  border: 1px solid black;
+  min-height: 5vw;
+  min-width: 5vw;
+}
+
+.color-select{
+  position:absolute;
+  top: 15%;
+  left:10%;
+}
+
+.color-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 5vw);
+  grid-template-rows: auto;
+}
+.palette{
+  position: absolute;
+  left: 80%;
+  top: 15%;
+}
+
+.palette-grid{
+  display: grid;
+  grid-template-columns: 5vw;
+  grid-template-rows: repeat(6, 5vw);
+  row-gap: 1vh;
+  margin-top: 2vh;
+  position: absolute;
+  right: 5%;
+}
+
+.palette-grid > div {
+  min-width: 5vw;
+  min-height: 5vw;
+  border: 1px solid black;
+}
