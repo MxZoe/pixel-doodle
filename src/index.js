@@ -11,6 +11,31 @@ function numberInArray(hexArray, color){
   });
   return occurances
 }
+function RGBToHex(r,g,b) {
+  r = r.toString(16);
+  g = g.toString(16);
+  b = b.toString(16);
+
+  if (r.length == 1)
+    r = "0" + r;
+  if (g.length == 1)
+    g = "0" + g;
+  if (b.length == 1)
+    b = "0" + b;
+
+  return "#" + r + g + b;
+}
+const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
+
+function colorCell(id){
+  let currentColor = document.getElementById("colorPick").value;
+    $("#"+id).css('background-color', currentColor)
+}
+
+function updateColorPick(id){
+  let colorValue = rgb2hex(document.getElementById(id).style.backgroundColor);
+  document.getElementById("colorPick").value = colorValue;
+}
 
 //creates an array of random hex numbers with no repeating values
 function randomHex(number){
@@ -33,7 +58,7 @@ function randomHex(number){
 }
 
 $(function(){
-
+  let counter = 0;
   $("#paletteButton").on("click", function(){
     let colorArray = randomHex(6);
     $('#p-color-1').css('background-color', colorArray[0])
@@ -46,6 +71,11 @@ $(function(){
 
   $("#saveButton").on("click", function(){
     let saveDiv = document.createElement("div");
+    let IdToAdd = "save" + counter;
+    counter++;
+    saveDiv.setAttribute('id', IdToAdd);
+    saveDiv.setAttribute('onclick', "updateColorPick(this.id)")
+
     let currentColor = document.getElementById("colorPick").value;
     $(saveDiv).css('background-color', currentColor);
     $(saveDiv).css('min-height', "5vw");
