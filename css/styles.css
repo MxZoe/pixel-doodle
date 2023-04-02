@@ -6,12 +6,10 @@
   width: 100%;
   margin-bottom: 2%;
 }
-
+/*pixel drawing canvas*/
 .canvas{
   height: 70%;
-
 }
-
 .doodle-grid{
   display: grid;
   min-width: 45%;
@@ -19,32 +17,42 @@
   grid-template-rows: repeat(8, 5vw);
   position: absolute;
   left: 30%;
-
 }
-
 .doodle-grid > div{
   border: 1px solid black;
   min-height: 5vw;
   min-width: 5vw;
 }
-
+/*End pixel drawing canvas formatting*/
+/*color select and save*/
 .color-select{
   position:absolute;
-  top: 15%;
+  top: 12%;
   left:10%;
 }
 
-.color-grid{
-  display: grid;
-  grid-template-columns: repeat(5, 5vw);
-  grid-template-rows: auto;
-}
-.palette{
-  position: absolute;
-  left: 80%;
-  top: 15%;
+#colorPick{
+  margin: 1%;
 }
 
+#saveButton{
+ margin: 1%;
+}
+.color-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 5vw);
+  grid-template-rows: auto;
+  column-gap: 1vh;
+  row-gap: 1vh;
+}
+/*end color select and save*/
+
+/*palette generator*/
+.palette{
+  position: absolute;
+  left: 83%;
+  top: 12%;
+}
 .palette-grid{
   display: grid;
   grid-template-columns: 5vw;
@@ -52,14 +60,16 @@
   row-gap: 1vh;
   margin-top: 2vh;
   position: absolute;
-  right: 5%;
+  right: 15%;
 }
-
 .palette-grid > div {
   min-width: 5vw;
   min-height: 5vw;
   border: 1px solid black;
 }
+/*end palette generator*/
+
+/*Lightmode toggle switch*/
 .slider-div{
   position: absolute;
   width: 10vh;
@@ -139,3 +149,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+/*End lightmode toggle formating*/

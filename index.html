@@ -8,7 +8,7 @@
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
     crossorigin="anonymous">
     </script>
-    <script src="src/index.js"></script>
+    <script type="application/javascript" src="src/index.js"></script>
   </head>
 <body>
   <div class="title">
@@ -97,13 +97,15 @@
     </div>
     <div class="color-select">
       <input type="color" id="colorPick" value="#EAEAEA">
-      <button type="button">Save Color</button>
+      <button type="button" id="saveButton">Save Color</button>
+      <h3>Saved Colors</h3>
       <div class="color-grid">
+       
 
       </div>
     </div>
     <div class="palette">
-      <button type="button">Generate Palette</button>
+      <button type="button" id="paletteButton">Generate Palette</button>
       <div class="palette-grid">
         <div id="p-color-1"></div>
         <div id="p-color-2"></div>
@@ -113,9 +115,6 @@
         <div id="p-color-6"></div>
       </div>
     </div>
-  </div>
-  <div class="saved-section">
-    <div class="saved-grid"></div>
   </div>
   
 </body>
