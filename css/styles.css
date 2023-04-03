@@ -1,10 +1,18 @@
 
 
+
+@font-face {
+  font-family: VT323;
+  src: url(/assets/VT323-Regular.woff);
+}
+
+
 .title{
   text-align: center;
   height: 10%;
   width: 100%;
   margin-bottom: 2%;
+  font-family: VT323;
 }
 .container{
   display:inline;
@@ -49,6 +57,8 @@
   border: 1px solid black;
   box-shadow: 5px 10px #888;
   overflow: auto;
+  font-family: VT323;
+  font-size: larger;
 }
 
 #colorPick{
@@ -57,6 +67,8 @@
 
 #saveButton{
  margin: 1%;
+ font-family: VT323;
+ font-size: medium;
 }
 @supports (display: grid) {
   .color-grid{
@@ -65,6 +77,9 @@
     grid-template-rows: auto;
     column-gap: 1vh;
     row-gap: 1vh;
+    position: absolute;
+    left: 20%;
+    
   }
 }
 /*end color select and save*/
@@ -80,6 +95,10 @@
   text-align: center;
   border: 1px solid black;
   box-shadow: 5px 10px #888;
+}
+#paletteButton{
+  font-family: VT323;
+  font-size: medium;
 }
 @supports (display: grid) {
   .palette-grid{
