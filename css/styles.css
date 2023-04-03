@@ -10,18 +10,20 @@
 .canvas{
   height: 70%;
 }
-.doodle-grid{
-  display: grid;
-  min-width: 45%;
-  grid-template-columns: repeat(8, 5vw);
-  grid-template-rows: repeat(8, 5vw);
-  position: absolute;
-  left: 30%;
-}
-.doodle-grid > div{
-  border: 1px solid black;
-  min-height: 5vw;
-  min-width: 5vw;
+@supports (display: grid) {
+  .doodle-grid{
+    display: grid;
+    min-width: 45%;
+    grid-template-columns: repeat(8, 5vw);
+    grid-template-rows: repeat(8, 5vw);
+    position: absolute;
+    left: 30%;
+  }
+  .doodle-grid > div{
+    border: 1px solid black;
+    min-height: 5vw;
+    min-width: 5vw;
+  }
 }
 /*End pixel drawing canvas formatting*/
 /*color select and save*/
@@ -38,12 +40,14 @@
 #saveButton{
  margin: 1%;
 }
-.color-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 5vw);
-  grid-template-rows: auto;
-  column-gap: 1vh;
-  row-gap: 1vh;
+@supports (display: grid) {
+  .color-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 5vw);
+    grid-template-rows: auto;
+    column-gap: 1vh;
+    row-gap: 1vh;
+  }
 }
 /*end color select and save*/
 
@@ -53,14 +57,16 @@
   left: 83%;
   top: 12%;
 }
-.palette-grid{
-  display: grid;
-  grid-template-columns: 5vw;
-  grid-template-rows: repeat(6, 5vw);
-  row-gap: 1vh;
-  margin-top: 2vh;
-  position: absolute;
-  right: 15%;
+@supports (display: grid) {
+  .palette-grid{
+    display: grid;
+    grid-template-columns: 5vw;
+    grid-template-rows: repeat(6, 5vw);
+    row-gap: 1vh;
+    margin-top: 2vh;
+    position: absolute;
+    right: 15%;
+  }
 }
 .palette-grid > div {
   min-width: 5vw;
