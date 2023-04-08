@@ -13,15 +13,22 @@
 <body>
   <div class="title">
     <h1>PIXEL DOODLE</h1>
-    <!--light/dark mode slider for the future
+    <div class="lines-div">
+      <label class="line-options" for="solid"> Solid </label>
+      <input name="line-options" id="solid" type="radio" value="solid" checked>
+      <label class="line-options" for="dashed"> Dashed </label>
+      <input name="line-options" id="dashed" type="radio" value="dashed">
+      <label class="line-options" for="dotted"> Dotted </label>
+      <input name="line-options" id="dotted" type="radio" value="dotted">
+    </div>
     <div class="slider-div">
       <label class="switch">
         <input type="checkbox" checked>
-        <span class="slider round"> <span class="left-span">☼</span>
+        <span class="slider"> <span class="left-span">☼</span>
         <span class="right-span">☾</span></span>
       </label>
     </div>
-     -->
+     
   </div>
   <div class="container">
     <div class="color-select">
@@ -32,7 +39,7 @@
       </div>
     </div>
     <div class="canvas">
-      <div class="doodle-grid">
+      <div id="doodle-grid">
         <div id="1-1" onclick="colorCell(this.id)"></div>
         <div id="1-2" onclick="colorCell(this.id)"></div>
         <div id="1-3" onclick="colorCell(this.id)"></div>

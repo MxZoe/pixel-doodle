@@ -82,4 +82,19 @@ $(function(){
     $(saveDiv).css('border', "1px solid black");
     $(".color-grid").append(saveDiv);
   })
+
+  $(".lines-div").on("change", function(){
+    let options = document.getElementsByName("line-options");
+    let selected;
+    let doodleCollection = document.getElementById("doodle-grid").children;
+    for(let i = 0; i < 3; i++){
+      if( options[i].checked){
+        selected = options[i].value;
+      }
+    }
+    for(let i = 0; i < doodleCollection.length; i++){
+     let currentDiv = document.getElementById((doodleCollection[i]).id)
+     $(currentDiv).css("border", "1px " + selected + " black")
+    }
+  })
 })
