@@ -20,6 +20,10 @@ ___
 1. add mobile styling
 2. change the size of the grid
 3. connect to a database to allow for sign in and saving images
+4. dark mode
+5. add erase all button
+6. add color all button
+7. Add a simplified theme for accessibility
 
 ## Known Bugs
 

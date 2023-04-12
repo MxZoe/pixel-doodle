@@ -6,6 +6,7 @@
   src: url(/assets/VT323-Regular.woff);
 }
 
+
 .lines-div{
   position: absolute;
   top: 5%;
@@ -50,6 +51,21 @@
   }
 }
 /*End pixel drawing canvas formatting*/
+@supports (display: grid) {
+  .inner-grid{
+    display: grid;
+    min-width: 45%;
+    grid-template-columns: repeat(2, 2.5vw);
+    grid-template-rows: repeat(2, 2.5vw);
+
+
+  }
+  .inner-grid > div{
+    border: 1px solid  black;
+    min-height: 2.5vw;
+    min-width: 2.5vw;
+  }
+}
 /*color select and save*/
 .color-select{
   position:fixed;
@@ -125,8 +141,14 @@
 /*end palette generator*/
 
 /*Lightmode toggle switch for the future*/
+#num-bit-slider{
+  position: absolute;
+  width: 10vh;
+  top: 2%;
+  left: 90%;
+}
 
-.slider-div{
+#theme-slider{
   position: absolute;
   width: 10vh;
   top: 2%;
@@ -135,13 +157,17 @@
 .left-span{
   position: absolute;
   left: 10%;
-  top: 20%;
+  top: 10%;
+  color: #ccc;
+  font-size: large;
 }
 
 .right-span{
   position: absolute;
   right: 15%;
   top: 10%;
+  color: #ccc;
+  font-size: large;
 }
 .switch {
   position: relative;
@@ -149,7 +175,6 @@
   width: 8vh;
   height: 4vh;
   top: 2%;
-
 }
 
 /* Hide default HTML checkbox */
@@ -184,7 +209,7 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
-
+/*
 input:checked + .slider {
   background-color: #2196F3;
 }
@@ -192,7 +217,7 @@ input:checked + .slider {
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
+*/
 input:checked + .slider:before {
   -webkit-transform: translateX(4vh);
   -ms-transform: translateX(4vh);

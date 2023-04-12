@@ -21,9 +21,16 @@
       <label class="line-options" for="dotted"> Dotted </label>
       <input name="line-options" id="dotted" type="radio" value="dotted">
     </div>
-    <div class="slider-div">
+    <div id="num-bit-slider" class="slider-div">
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox">
+        <span class="slider"> <span class="left-span">8</span>
+        <span class="right-span">16</span></span>
+      </label>
+    </div>
+    <div id="theme-slider" class="slider-div">
+      <label class="switch">
+        <input type="checkbox">
         <span class="slider"> <span class="left-span">☼</span>
         <span class="right-span">☾</span></span>
       </label>
@@ -40,7 +47,14 @@
     </div>
     <div class="canvas">
       <div id="doodle-grid">
-        <div id="1-1" onclick="colorCell(this.id)"></div>
+        <div id="1-1" onclick="colorCell(this.id)">
+          <div class="inner-grid" id="inner-grid-1">
+            <div id="inner-1-1" class="inner-cell" onclick="colorCell(this.id)"></div>
+            <div id="inner-1-2" class="inner-cell"></div>
+            <div id="inner-2-1" class="inner-cell"></div>
+            <div id="inner-2-2" class="inner-cell"></div>
+          </div>
+        </div>
         <div id="1-2" onclick="colorCell(this.id)"></div>
         <div id="1-3" onclick="colorCell(this.id)"></div>
         <div id="1-4" onclick="colorCell(this.id)"></div>
