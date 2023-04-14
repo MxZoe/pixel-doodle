@@ -1,5 +1,4 @@
 
-
 //utility functions
 //function to check if a color is in the given array and to return how many times it is
 function numberInArray(hexArray, color){
@@ -57,8 +56,21 @@ function randomHex(number){
   return symbolArray;
 }
 
+
 $(function(){
   let counter = 0;
+  $("#theme-change").on("change", function(){
+    if ($('#theme-change').is(":checked")) {
+      $("body").toggleClass("dark-theme");
+      $(".cell").css("border-color", "rgb(221,214,214)"); //classList problems
+
+      
+     
+   } else {
+      $("body").toggleClass("dark-theme");
+      $(".cell").css("border-color", "black");
+   }
+  })
   $("#paletteButton").on("click", function(){
     let colorArray = randomHex(6);
     $('#p-color-1').css('background-color', colorArray[0])

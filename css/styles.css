@@ -6,6 +6,21 @@
   src: url(/assets/VT323-Regular.woff);
 }
 
+body {
+  color: black;
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  justify-content: center;
+}
+.dark-theme {
+  color: rgb(221, 214, 214);
+  background-color: rgb(43, 35, 35);
+}
+
+.dark-theme-border{
+  border: 1px solid rgb(221, 214, 214);
+}
+
 
 .lines-div{
   position: absolute;
@@ -44,7 +59,7 @@
     top:12%;
 
   }
-  #doodle-grid > div{
+  .cell{
     border: 1px solid  black;
     min-height: 5vw;
     min-width: 5vw;
